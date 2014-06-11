@@ -5,7 +5,6 @@ class people::pauldambra {
 	include firefox
 	include skype
 	include dropbox
-	include vagrant
 	include googledrive
 
 	
