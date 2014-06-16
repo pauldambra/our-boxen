@@ -6,6 +6,7 @@ class people::pauldambra {
 	include skype
 	include dropbox
 	include googledrive
+	include p4merge
 
 	
 	include osx::global::tap_to_click
