@@ -6,6 +6,12 @@ class people::pauldambra {
 	include skype
 	include dropbox
 	include googledrive
+
+
+	file { [ "/usr/", "/usr/local/",
+         "/usr/local/bin" ]:
+	    ensure => "directory",
+	}
 	include p4merge
 
 	
@@ -29,6 +35,14 @@ class people::pauldambra {
 
 	class { 'vagrant':
 	  completion => true,
+	}
+
+	git::config::global { 'user.email':
+	  value  => 'pauldambra@gmail.com'
+	}
+
+	git::config::global { 'user.name':
+	  value  => 'Paul D\'Ambra'
 	}
 }
 

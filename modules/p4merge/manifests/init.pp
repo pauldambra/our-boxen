@@ -10,7 +10,7 @@ class p4merge {
     ensure  => file,
     path    => '/usr/local/bin/p4diff',
     require => Package['P4Merge'],
-    source  => 'puppet:///modules/p4merge/p4diff',
+    source  => 'puppet:///modules/p4merge/p4diff',  
     mode    => '0755',
   }  
 
