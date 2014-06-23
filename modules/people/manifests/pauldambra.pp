@@ -32,7 +32,7 @@ class people::pauldambra {
 	  source => 'victorporof/Sublime-JSHint'
 	}
 
-	sublime_text::package { 'JSHint Gutter': 
+	sublime_text::package { 'Pretty JSON': 
 	  source => 'dzhibas/SublimePrettyJson'
 	}
 
