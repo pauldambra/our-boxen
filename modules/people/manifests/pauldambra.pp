@@ -1,6 +1,5 @@
 class people::pauldambra {
 	include chrome
-	include virtualbox
 	include alfred
 	include firefox
 	include skype
@@ -31,6 +30,10 @@ class people::pauldambra {
 
 	sublime_text::package { 'JSHint Gutter': 
 	  source => 'victorporof/Sublime-JSHint'
+	}
+
+	sublime_text::package { 'JSHint Gutter': 
+	  source => 'dzhibas/SublimePrettyJson'
 	}
 
 	class { 'vagrant':
