@@ -41,11 +41,16 @@ class people::pauldambra {
 	}
 
 	git::config::global { 'user.email':
-	  value  => 'pauldambra@gmail.com'
+	  value  => 'pdambra@roishoppermarketing.com'
 	}
 
 	git::config::global { 'user.name':
 	  value  => 'Paul D\'Ambra'
+	}
+
+	include homebrew
+	package { "mono":
+        ensure => installed
 	}
 }
 
