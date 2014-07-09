@@ -48,9 +48,14 @@ class people::pauldambra {
 	  value  => 'Paul D\'Ambra'
 	}
 
-	include homebrew
 	package { "mono":
-        ensure => installed
+        ensure => present,
+	}
+
+	exec { "set exes as executable":
+		command => 'chmod +x /opt/boxen/homebrew/Cellar/mono/3.4.0/lib/mono/**/*/*.exe',
+		path    => "/usr/local/bin/:/bin/",
+		require => Package['mono'],
 	}
 }
 
