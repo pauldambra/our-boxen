@@ -36,6 +36,14 @@ class people::pauldambra {
 	  source => 'dzhibas/SublimePrettyJson'
 	}
 
+	sublime_text::package { 'Color Highlighter': 
+	  source => 'Monnoroch/ColorHighlighter'
+	}
+
+	sublime_text::package { 'HTMLBeautify': 
+	  source => 'rareyman/HTMLBeautify'
+	}
+
 	class { 'vagrant':
 	  completion => true,
 	}
