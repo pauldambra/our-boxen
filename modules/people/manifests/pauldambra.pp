@@ -7,6 +7,9 @@ class people::pauldambra {
 	include googledrive
 	include mou
 
+	include iterm2::dev
+	include iterm2::colors::solarized_dark
+
 	file { [ "/usr/", "/usr/local/",
          "/usr/local/bin" ]:
 	    ensure => "directory",
