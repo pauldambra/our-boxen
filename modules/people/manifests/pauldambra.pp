@@ -44,6 +44,10 @@ class people::pauldambra {
 	  source => 'rareyman/HTMLBeautify'
 	}
 
+	sublime_text::package { 'Powershell': 
+		source => 'SublimeText/PowerShell'
+	}
+
 	class { 'vagrant':
 	  completion => true,
 	}
