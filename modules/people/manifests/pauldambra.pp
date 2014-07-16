@@ -5,7 +5,7 @@ class people::pauldambra {
 	include skype
 	include dropbox
 	include googledrive
-
+	include mou
 
 	file { [ "/usr/", "/usr/local/",
          "/usr/local/bin" ]:
