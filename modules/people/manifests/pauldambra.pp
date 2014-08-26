@@ -14,7 +14,6 @@ class people::pauldambra {
          "/usr/local/bin" ]:
 	    ensure => "directory",
 	}
-	include p4merge
 
 	
 	include osx::global::tap_to_click
