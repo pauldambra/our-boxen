@@ -14,15 +14,10 @@ class people::pauldambra {
          "/usr/local/bin" ]:
 	    ensure => "directory",
 	}
-
 	
 	include osx::global::tap_to_click
 	include osx::dock::autohide
 	include osx::software_update
-
-	class { 'osx::dock::position':
-	  position => 'left'
-	}
 
 	include sublime_text
 
@@ -50,10 +45,6 @@ class people::pauldambra {
 		source => 'SublimeText/PowerShell'
 	}
 
-	class { 'vagrant':
-	  completion => true,
-	}
-
 	git::config::global { 'user.email':
 	  value  => 'pdambra@roishoppermarketing.com'
 	}
@@ -63,7 +54,7 @@ class people::pauldambra {
 	}
 
 	package { "mono":
-        ensure => present,
+          ensure => present,
 	}
 
 	exec { "set exes as executable":
