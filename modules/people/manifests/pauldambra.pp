@@ -58,14 +58,6 @@ class people::pauldambra {
 		source => 'SublimeText/PowerShell'
 	}
 
-	git::config::global { 'user.email':
-	  value  => 'pdambra@roishoppermarketing.com'
-	}
-
-	git::config::global { 'user.name':
-	  value  => 'Paul D\'Ambra'
-	}
-
 	package { "mono":
           ensure => present,
 	}
