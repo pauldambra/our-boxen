@@ -7,7 +7,7 @@ class people::pauldambra {
 	include googledrive
 	include mou
 	include gimp
-
+	include homebrew
 	include iterm2::dev
 	include iterm2::colors::solarized_dark
 
