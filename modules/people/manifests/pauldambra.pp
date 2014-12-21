@@ -6,6 +6,7 @@ class people::pauldambra {
 	include dropbox
 	include googledrive
 	include mou
+	include gimp
 
 	include iterm2::dev
 	include iterm2::colors::solarized_dark
@@ -15,6 +16,18 @@ class people::pauldambra {
 	    ensure => "directory",
 	}
 	
+	git::config::global { 'user.email':
+	  value  => 'paul.dambra@gmail.com'
+	}
+
+	git::config::global { 'user.name':
+	  value  => "Paul D'Ambra"
+	}
+
+	git::config::global { 'help.autocorrect':
+	  value  => "3"
+	}
+
 	include osx::global::tap_to_click
 	include osx::dock::autohide
 	include osx::software_update
