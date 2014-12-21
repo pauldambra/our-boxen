@@ -67,4 +67,5 @@ github "skype",       "1.1.0"
 github "dropbox",     "1.4.1"
 github "googledrive", "1.0.2"
 github "mou",         "1.1"
-github "iterm2",      "1.2.2"
+github "iterm2",      "1.2.2",
+github "boxen",       "1.0.0"
