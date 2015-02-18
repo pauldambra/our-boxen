@@ -6,7 +6,8 @@ class people::pauldambra {
 	include dropbox
 	include googledrive
 	include mou
-
+	include gimp
+	include homebrew
 	include iterm2::dev
 	include iterm2::colors::solarized_dark
 
@@ -14,15 +15,22 @@ class people::pauldambra {
          "/usr/local/bin" ]:
 	    ensure => "directory",
 	}
-
 	
+	git::config::global { 'user.email':
+	  value  => 'paul.dambra@gmail.com'
+	}
+
+	git::config::global { 'user.name':
+	  value  => "Paul D'Ambra"
+	}
+
+	git::config::global { 'help.autocorrect':
+	  value  => "3"
+	}
+
 	include osx::global::tap_to_click
 	include osx::dock::autohide
 	include osx::software_update
-
-	class { 'osx::dock::position':
-	  position => 'left'
-	}
 
 	include sublime_text
 
@@ -50,20 +58,8 @@ class people::pauldambra {
 		source => 'SublimeText/PowerShell'
 	}
 
-	class { 'vagrant':
-	  completion => true,
-	}
-
-	git::config::global { 'user.email':
-	  value  => 'pdambra@roishoppermarketing.com'
-	}
-
-	git::config::global { 'user.name':
-	  value  => 'Paul D\'Ambra'
-	}
-
 	package { "mono":
-        ensure => present,
+          ensure => present,
 	}
 
 	exec { "set exes as executable":
