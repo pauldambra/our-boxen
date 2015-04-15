@@ -10,6 +10,7 @@ class people::pauldambra {
 	include homebrew
 	include iterm2::dev
 	include iterm2::colors::solarized_dark
+	include java
 
 	file { [ "/usr/", "/usr/local/",
          "/usr/local/bin" ]:
