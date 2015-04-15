@@ -38,6 +38,10 @@ class people::pauldambra {
 	  source => 'sergeche/emmet-sublime'
 	}
 
+	sublime_text::package { 'SublimeCodeIntel':
+	  source => 'SublimeCodeIntel/SublimeCodeIntel'
+	}
+
 	sublime_text::package { 'JSHint Gutter': 
 	  source => 'victorporof/Sublime-JSHint'
 	}
