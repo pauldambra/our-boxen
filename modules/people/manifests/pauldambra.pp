@@ -11,6 +11,7 @@ class people::pauldambra {
 	include iterm2::dev
 	include iterm2::colors::solarized_dark
 	include java
+	include zsh
 
 	file { [ "/usr/", "/usr/local/",
          "/usr/local/bin" ]:
@@ -47,6 +48,10 @@ class people::pauldambra {
 	  source => 'victorporof/Sublime-JSHint'
 	}
 
+	sublime_text::package { 'Markdown Preview': 
+	  source => 'revolunet/sublimetext-markdown-preview'
+	}
+
 	sublime_text::package { 'Pretty JSON': 
 	  source => 'dzhibas/SublimePrettyJson'
 	}
@@ -71,6 +76,11 @@ class people::pauldambra {
 		command => 'chmod +x /opt/boxen/homebrew/Cellar/mono/3.4.0/lib/mono/**/*/*.exe',
 		path    => "/usr/local/bin/:/bin/",
 		require => Package['mono'],
+	}
+
+	exec { "install oh-my-zsh":
+		command => 'curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh',
+		require => Package['zsh']
 	}
 }
 
