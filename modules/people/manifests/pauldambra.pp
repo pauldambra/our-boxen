@@ -13,6 +13,10 @@ class people::pauldambra {
 	include java
 	include zsh
 
+	class { 'powerline':
+	  manage_font_library_dir => true,
+	}
+
 	file { [ "/usr/", "/usr/local/",
          "/usr/local/bin" ]:
 	    ensure => "directory",
