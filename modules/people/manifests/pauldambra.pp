@@ -72,6 +72,16 @@ class people::pauldambra {
 		source => 'SublimeText/PowerShell'
 	}
 
+	package { "mono":
+          ensure => present,
+	}
+
+	exec { "set exes as executable":
+		command => 'chmod +x /opt/boxen/homebrew/Cellar/mono/3.4.0/lib/mono/**/*/*.exe',
+		path    => "/usr/local/bin/:/bin/",
+		require => Package['mono'],
+	}
+
 	exec { "install oh-my-zsh":
 		command => 'curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh',
 		require => Package['zsh']
